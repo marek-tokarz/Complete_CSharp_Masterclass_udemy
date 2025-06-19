@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Making_decisions", "Making_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryParse", "TryParse\TryParse.csproj", "{16C8E469-3E50-44EC-A962-B1B80BE18AA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculator", "SimpleCalculator\SimpleCalculator.csproj", "{0D6DA6E9-7DDE-47D4-BAA0-3832F98BB165}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{16C8E469-3E50-44EC-A962-B1B80BE18AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16C8E469-3E50-44EC-A962-B1B80BE18AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16C8E469-3E50-44EC-A962-B1B80BE18AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D6DA6E9-7DDE-47D4-BAA0-3832F98BB165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D6DA6E9-7DDE-47D4-BAA0-3832F98BB165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D6DA6E9-7DDE-47D4-BAA0-3832F98BB165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D6DA6E9-7DDE-47D4-BAA0-3832F98BB165}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
