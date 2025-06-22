@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36212.18 d17.14
+VisualStudioVersion = 17.14.36212.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureGame", "AdventureGame\AdventureGame.csproj", "{367BCFA2-CCF2-48DD-9CFB-2A65C67CC55E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakAndContinue", "BreakAndContinue\BreakAndContinue.csproj", "{569FBFB4-4CD1-4EA3-8269-A129A7EEC0B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{367BCFA2-CCF2-48DD-9CFB-2A65C67CC55E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{367BCFA2-CCF2-48DD-9CFB-2A65C67CC55E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{367BCFA2-CCF2-48DD-9CFB-2A65C67CC55E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{569FBFB4-4CD1-4EA3-8269-A129A7EEC0B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{569FBFB4-4CD1-4EA3-8269-A129A7EEC0B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{569FBFB4-4CD1-4EA3-8269-A129A7EEC0B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{569FBFB4-4CD1-4EA3-8269-A129A7EEC0B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
