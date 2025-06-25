@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureGame", "AdventureG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakAndContinue", "BreakAndContinue\BreakAndContinue.csproj", "{569FBFB4-4CD1-4EA3-8269-A129A7EEC0B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForeachLoopAndTwoDimensionArray", "ForeachLoop\ForeachLoopAndTwoDimensionArray.csproj", "{08089BAC-9A82-4C00-949C-0F4D7D0E40CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{569FBFB4-4CD1-4EA3-8269-A129A7EEC0B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{569FBFB4-4CD1-4EA3-8269-A129A7EEC0B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{569FBFB4-4CD1-4EA3-8269-A129A7EEC0B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08089BAC-9A82-4C00-949C-0F4D7D0E40CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08089BAC-9A82-4C00-949C-0F4D7D0E40CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08089BAC-9A82-4C00-949C-0F4D7D0E40CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08089BAC-9A82-4C00-949C-0F4D7D0E40CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
