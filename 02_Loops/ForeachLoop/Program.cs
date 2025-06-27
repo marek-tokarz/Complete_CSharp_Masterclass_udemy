@@ -1,4 +1,6 @@
-﻿string[] weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+string[] weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 Console.WriteLine("Length of the 'weekdays' array is: " + weekDays.Length);
 
@@ -55,5 +57,41 @@ string[,] ticTacToeField =
     { "O", "O", "X" },
     { "X", "X", "O" },
 };
+
+Console.WriteLine("Results of an exercise");
+
+int[,] numbers =
+{
+    { 1, 2, 3 },
+    { 4, 5, 6 },
+    { 7, 8, 9 },
+};
+
+int sum = 0;
+
+for (int i = 0; i < 3; i++)
+{
+    sum = sum + numbers[0, i];
+}
+
+Console.WriteLine(sum);
+
+sum = 0;
+
+for (int i = 0; i < 3; i++)
+{
+    sum = sum + numbers[1, i];
+}
+
+Console.WriteLine(sum);
+
+sum = 0;
+
+for (int i = 0; i < 3; i++)
+{
+    sum = sum + numbers[2, i];
+}
+
+Console.WriteLine(sum);
 
 Console.ReadLine();
