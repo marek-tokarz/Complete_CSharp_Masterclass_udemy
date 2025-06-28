@@ -34,6 +34,12 @@ namespace WeatherSimulator
                 weatherConditions[i] = conditions[random.Next(conditions.Length)];
             }
 
+            int maxTemperature = temperature.Max();
+            int minTemperature = temperature.Min();
+
+            Console.WriteLine("Max temperature is: " + maxTemperature);
+            Console.WriteLine("Min temperature is: " + minTemperature);
+
             Console.WriteLine("Average temperature is " + calculateAverageTemperature(temperature));
 
             Console.ReadLine();
