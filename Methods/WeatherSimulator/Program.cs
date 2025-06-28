@@ -4,18 +4,7 @@ namespace WeatherSimulator
 {
     internal class Program
     {
-        static int calculateAverageTemperature(int[] temperature)
-        {
-            int sum = 0;
-            int counter = 0;
-            foreach(var item in temperature)
-            {
-                sum = sum + item;
-                counter++;
-            }
-            return sum/counter;
-        }
-
+        
         static void Main(string[] args)
         {
             Console.WriteLine("Enter the number of days to simulate");
@@ -42,7 +31,45 @@ namespace WeatherSimulator
 
             Console.WriteLine("Average temperature is " + calculateAverageTemperature(temperature));
 
+            Console.WriteLine("Most common weather condiditon: " + MostCommonCondition(conditions));
+
             Console.ReadLine();
+        }
+
+        static int calculateAverageTemperature(int[] temperature)
+        {
+            int sum = 0;
+            int counter = 0;
+            foreach (var item in temperature)
+            {
+                sum = sum + item;
+                counter++;
+            }
+            return sum / counter;
+        }
+
+        static string MostCommonCondition(string[] conditions)
+        {
+            int count = 0;
+            string mostCommon = conditions[0];
+
+            for (int i = 0; i < conditions.Length; i++)
+            {
+                int tempCount = 0;
+                for (int j = 0; j < conditions.Length; j++)
+                {
+                    if (conditions[j] == conditions[i])
+                    {
+                        tempCount++;
+                    }
+                }
+                if (tempCount > count)
+                {
+                    count = tempCount;
+                    mostCommon = conditions[i];
+                }
+            }
+            return mostCommon;
         }
     }
 }
