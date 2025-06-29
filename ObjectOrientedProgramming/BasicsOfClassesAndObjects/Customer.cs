@@ -14,6 +14,14 @@ namespace BasicsOfClassesAndObjects
 
         public string ContactNumber { get; set; }
 
+        // Default constructor
+        public Customer()
+        {
+            Name = "New Customer";
+            Address = "No Address";
+            ContactNumber = "None";
+        }
+
         // Custom Constructor
         public Customer(string name, string address, string contacNumber)
         {

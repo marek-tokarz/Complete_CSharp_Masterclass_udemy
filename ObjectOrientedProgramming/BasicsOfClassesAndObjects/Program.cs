@@ -29,6 +29,9 @@
 
             Console.WriteLine("Name of a customer is: " + earl.Name);
 
+            Customer myCustomer = new Customer();
+            Console.WriteLine("Details about customer " + myCustomer.Name);
+
             Console.ReadKey();
         }
     }
