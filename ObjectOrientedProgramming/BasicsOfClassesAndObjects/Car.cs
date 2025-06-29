@@ -15,7 +15,22 @@ namespace BasicsOfClassesAndObjects
 
         //Property
         public string Model { get => _model; set => _model = value; }
-        public string Brand { get => _brand; set => _brand = value; }
+        public string Brand
+        {
+            get => _brand;
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    Console.WriteLine("You have entered nothing!");
+                    _brand = "Default value";
+                }
+                else
+                {
+                    _brand = value;
+                }
+            }
+        }
 
         // Constructor
         public Car(string model, string brand) 
@@ -26,7 +41,5 @@ namespace BasicsOfClassesAndObjects
             Console.WriteLine("A car of the " + Brand + " brand and model "
                 + Model + " has been created");
         }
-
-        
     }
 }

@@ -10,6 +10,13 @@
 
             Car bmw = new Car("i7", "BMW");
 
+            Console.WriteLine("Enter the brand name");
+            // Setting brand of a car - by property
+            audi.Brand = Console.ReadLine();
+
+            // Getting a brand of a car - by property
+            Console.WriteLine("Brand is " + audi.Brand);
+
             Console.ReadKey();
         }
     }
