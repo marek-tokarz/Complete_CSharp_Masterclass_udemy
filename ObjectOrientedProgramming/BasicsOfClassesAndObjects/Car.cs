@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,16 +11,20 @@ namespace BasicsOfClassesAndObjects
     {
         // member variables
         // 'private' hides a variable from other classes
-        private string _model = "";
+        // Backing fields of the properties 
+        // private string _model = "";
 
         private string _brand = "";
 
         private bool _isLuxury;
 
+        // default property - a backing field is then unnecessary
+        public string Model { get; set; }
+
         //Properties
 
         // Property with lambda expressions
-        public string Model { get => _model; set => _model = value; }
+        // public string Model { get => _model; set => _model = value; } // comented because we defined a default property: public string Model { get; set; }
 
         // Property without lambda expressions
         /*
