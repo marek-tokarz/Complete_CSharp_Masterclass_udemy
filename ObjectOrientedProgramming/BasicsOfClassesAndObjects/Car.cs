@@ -8,16 +8,29 @@ namespace BasicsOfClassesAndObjects
 {
     internal class Car
     {
-        // member variable
+        // member variables
         // 'private' hides a variable from other classes
         private string _model = "";
+
         private string _brand = "";
 
-        //Property
+        private bool _isLuxury;
+
+        //Properties
         public string Model { get => _model; set => _model = value; }
         public string Brand
         {
-            get => _brand;
+            get
+            {
+                if(_isLuxury)
+                {
+                    return _brand + " - Luxury Edition";
+                }
+                else
+                {
+                    return _brand;
+                }
+            }
             set
             {
                 if (string.IsNullOrEmpty(value))
@@ -31,13 +44,15 @@ namespace BasicsOfClassesAndObjects
                 }
             }
         }
+        public bool IsLuxury { get => _isLuxury; set => _isLuxury = value; }
 
         // Constructor
-        public Car(string model, string brand) 
+        public Car(string model, string brand, bool isLuxury) 
         {
             // only properties can modify this fields
             Model = model;
             Brand = brand;
+            IsLuxury = isLuxury;
             Console.WriteLine("A car of the " + Brand + " brand and model "
                 + Model + " has been created");
         }
