@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Car car = new Car();
+            // Creating an object of the Class Car
+            // Creating an instance of the Class Car
+            Car audi = new Car("A3");
+
+            Car bmw = new Car("i7");
 
             Console.ReadKey();
         }

@@ -8,10 +8,15 @@ namespace BasicsOfClassesAndObjects
 {
     internal class Car
     {
+        // member variable
+        // 'private' hides a variable from other classes
+        private string _model = "";
+
         // Constructor
-        public Car() 
+        public Car(string model) 
         {
-            Console.WriteLine("An object of car has been created!");
+            _model = model;
+            Console.WriteLine("A car of the model " + _model + " has been created");
         }
     }
 }
