@@ -11,12 +11,22 @@ namespace BasicsOfClassesAndObjects
         // member variable
         // 'private' hides a variable from other classes
         private string _model = "";
+        private string _brand = "";
+
+        //Property
+        public string Model { get => _model; set => _model = value; }
+        public string Brand { get => _brand; set => _brand = value; }
 
         // Constructor
-        public Car(string model) 
+        public Car(string model, string brand) 
         {
-            _model = model;
-            Console.WriteLine("A car of the model " + _model + " has been created");
+            // only properties can modify this fields
+            Model = model;
+            Brand = brand;
+            Console.WriteLine("A car of the " + Brand + " brand and model "
+                + Model + " has been created");
         }
+
+        
     }
 }

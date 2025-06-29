@@ -6,9 +6,9 @@
         {
             // Creating an object of the Class Car
             // Creating an instance of the Class Car
-            Car audi = new Car("A3");
+            Car audi = new Car("A3", "Audi");
 
-            Car bmw = new Car("i7");
+            Car bmw = new Car("i7", "BMW");
 
             Console.ReadKey();
         }
