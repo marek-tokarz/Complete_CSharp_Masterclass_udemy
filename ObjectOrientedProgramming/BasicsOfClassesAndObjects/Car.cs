@@ -17,7 +17,24 @@ namespace BasicsOfClassesAndObjects
         private bool _isLuxury;
 
         //Properties
+
+        // Property with lambda expressions
         public string Model { get => _model; set => _model = value; }
+
+        // Property without lambda expressions
+        /*
+        public string Model
+        {
+            get
+            {
+                return _model;
+            }
+            set
+            {
+                _model = value;
+            }
+        }
+        */
         public string Brand
         {
             get
