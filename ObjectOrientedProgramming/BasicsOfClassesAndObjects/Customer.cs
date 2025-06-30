@@ -35,5 +35,12 @@ namespace BasicsOfClassesAndObjects
             Name = name;
         }
 
+        public void SetDetails(string name, string address, string contacNumber)
+        {
+            Name = name;
+            Address = address;
+            ContactNumber = contacNumber;
+        }
+
     }
 }

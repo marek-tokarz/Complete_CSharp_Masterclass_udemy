@@ -78,5 +78,10 @@ namespace BasicsOfClassesAndObjects
             Console.WriteLine("A car of the " + Brand + " brand and model "
                 + Model + " has been created");
         }
+
+        public void Drive()
+        {
+            Console.WriteLine("I'm driving");
+        }
     }
 }

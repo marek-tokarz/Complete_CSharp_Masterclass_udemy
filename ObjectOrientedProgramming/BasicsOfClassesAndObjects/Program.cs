@@ -23,14 +23,26 @@
             */
 
             // EXAMPLES WITH CUSTOMER
-
+            /*
             Customer earl = new Customer("Earl");
             Customer marek = new Customer("Marek", "Mainstreet 1", "5551234567");
 
             Console.WriteLine("Name of a customer is: " + earl.Name);
 
             Customer myCustomer = new Customer();
-            Console.WriteLine("Details about customer " + myCustomer.Name);
+            Console.WriteLine("Details about customer: " + myCustomer.Name);
+            */
+
+            Car myAudi = new Car("A3", "Audi", false);
+
+            myAudi.Drive();
+
+            Car myBMW = new Car("i7", "BMW", true);
+
+            myBMW.Drive();
+
+            Customer myCustomer = new Customer();
+            myCustomer.SetDetails("Tom", "Sunnystreet 5", "5451234567");
 
             Console.ReadKey();
         }
