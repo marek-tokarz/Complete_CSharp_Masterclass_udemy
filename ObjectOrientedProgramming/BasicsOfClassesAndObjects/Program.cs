@@ -44,6 +44,12 @@
             Customer myCustomer = new Customer();
             myCustomer.SetDetails("Tom", "Sunnystreet 5", "5451234567");
 
+            // Creating a customer and setting his details with one detail being optional
+            Customer myCustomer2 = new Customer();
+            myCustomer2.SetDetails("Frank", "Cloudystreet 5");
+
+            Console.WriteLine("Contact number of a Frank 'myCustomer2' is " + myCustomer2.ContactNumber);
+
             Console.ReadKey();
         }
     }

@@ -22,6 +22,8 @@ namespace BasicsOfClassesAndObjects
             ContactNumber = "None";
         }
 
+        /* not needed - because we have created a custom constructor with optional parameters:
+         * public Customer(string name, string addres = "NA", string contacNumber = "NA") ...
         // Custom Constructor
         public Customer(string name, string address, string contacNumber)
         {
@@ -29,13 +31,14 @@ namespace BasicsOfClassesAndObjects
             Address = address;
             ContactNumber = contacNumber;
         }
+        */
 
-        public Customer(string name)
+        public Customer(string name, string addres = "NA", string contacNumber = "NA")
         {
             Name = name;
         }
-
-        public void SetDetails(string name, string address, string contacNumber)
+        // Last parameter is an optional parameter
+        public void SetDetails(string name, string address, string contacNumber = "NA")
         {
             Name = name;
             Address = address;
