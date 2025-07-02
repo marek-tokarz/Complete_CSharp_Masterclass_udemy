@@ -1,4 +1,7 @@
-﻿namespace BasicsOfClassesAndObjects
+﻿using System.Net;
+using System.Xml.Linq;
+
+namespace BasicsOfClassesAndObjects
 {
     internal class Program
     {
@@ -42,7 +45,9 @@
             myBMW.Drive();
 
             Customer myCustomer = new Customer();
-            myCustomer.SetDetails("Tom", "Sunnystreet 5", "5451234567");
+            // Named Parameters:
+            // public void SetDetails(string name, string address, string contacNumber = "NA")
+            myCustomer.SetDetails(name: "Tom", address: "Sunnystreet 5", contacNumber: "5451234567");
 
             // Creating a customer and setting his details with one detail being optional
             Customer myCustomer2 = new Customer();
