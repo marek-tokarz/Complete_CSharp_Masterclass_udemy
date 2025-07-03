@@ -66,6 +66,16 @@ namespace BasicsOfClassesAndObjects
             // When only get: read only property,(when only set: write only property
             Console.WriteLine("Area of r1 is " + r1.Area);
 
+            // Unique ID of an instance - a customer
+
+            Customer myCustomer3 = new Customer();
+            Customer myCustomer4 = new Customer("John Doe");
+
+            Console.WriteLine("Details of cutomers");
+
+            myCustomer3.GetDetails();
+            myCustomer4.GetDetails();
+
             Console.ReadKey();
         }
     }

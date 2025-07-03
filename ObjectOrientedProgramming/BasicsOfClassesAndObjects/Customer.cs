@@ -8,6 +8,12 @@ namespace BasicsOfClassesAndObjects
 {
     internal class Customer
     {
+        // Static field to hold the next ID available
+        private static int nextId = 0;
+
+        // Read-only instance field initalized from the constructor
+        private readonly int _id;
+
         public string Name { get; set; }
 
         public string Address { get; set; }
@@ -17,6 +23,7 @@ namespace BasicsOfClassesAndObjects
         // Default constructor
         public Customer()
         {
+            _id = nextId++;
             Name = "New Customer";
             Address = "No Address";
             ContactNumber = "None";
@@ -35,7 +42,10 @@ namespace BasicsOfClassesAndObjects
 
         public Customer(string name, string addres = "NA", string contacNumber = "NA")
         {
+            _id = nextId++;
             Name = name;
+            Address = addres;
+            ContactNumber = contacNumber;
         }
         // Last parameter is an optional parameter
         public void SetDetails(string name, string address, string contacNumber = "NA")
@@ -43,6 +53,11 @@ namespace BasicsOfClassesAndObjects
             Name = name;
             Address = address;
             ContactNumber = contacNumber;
+        }
+
+        public void GetDetails()
+        {
+            Console.WriteLine($"Details about customer: Name is {Name} and Id is {_id}");
         }
 
     }
