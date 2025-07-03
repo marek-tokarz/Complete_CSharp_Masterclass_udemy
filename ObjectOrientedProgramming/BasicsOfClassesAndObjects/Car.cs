@@ -9,6 +9,9 @@ namespace BasicsOfClassesAndObjects
 {
     internal class Car
     {
+        // static field
+        public static int NumberOfCars = 0;
+
         // member variables
         // 'private' hides a variable from other classes
         // Backing fields of the properties 
@@ -71,12 +74,19 @@ namespace BasicsOfClassesAndObjects
         // Constructor
         public Car(string model, string brand, bool isLuxury) 
         {
+            NumberOfCars++;
+
             // only properties can modify this fields
             Model = model;
             Brand = brand;
             IsLuxury = isLuxury;
             Console.WriteLine("A car of the " + Brand + " brand and model "
                 + Model + " has been created");
+        }
+
+        public Car()
+        {
+            NumberOfCars++;
         }
 
         public void Drive()

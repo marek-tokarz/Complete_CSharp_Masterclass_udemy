@@ -44,6 +44,8 @@ namespace BasicsOfClassesAndObjects
 
             myBMW.Drive();
 
+            Console.WriteLine("Number of cars produced: " + Car.NumberOfCars);
+
             Customer myCustomer = new Customer();
             // Named Parameters:
             // public void SetDetails(string name, string address, string contacNumber = "NA")
@@ -54,6 +56,15 @@ namespace BasicsOfClassesAndObjects
             myCustomer2.SetDetails("Frank", "Cloudystreet 5");
 
             Console.WriteLine("Contact number of a Frank 'myCustomer2' is " + myCustomer2.ContactNumber);
+
+            // Computed properties use case:
+
+            Rectangle_CalculatedProperty r1 = new Rectangle_CalculatedProperty();
+            r1.Width = 5;
+            r1.Height = 5;
+            // r1.Area = 5; // Causes error, we have only 'get' and no 'set' 
+            // When only get: read only property,(when only set: write only property
+            Console.WriteLine("Area of r1 is " + r1.Area);
 
             Console.ReadKey();
         }
