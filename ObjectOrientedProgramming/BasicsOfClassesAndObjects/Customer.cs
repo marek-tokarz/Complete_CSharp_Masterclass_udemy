@@ -14,6 +14,12 @@ namespace BasicsOfClassesAndObjects
         // Read-only instance field initalized from the constructor
         private readonly int _id;
 
+        // Read only property
+        public int Id { 
+            get
+                { return _id; }
+        } // there is no 'set' here
+
         public string Name { get; set; }
 
         public string Address { get; set; }
