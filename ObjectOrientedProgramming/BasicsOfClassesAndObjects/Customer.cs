@@ -14,6 +14,17 @@ namespace BasicsOfClassesAndObjects
         // Read-only instance field initalized from the constructor
         private readonly int _id;
 
+        // Backing field for a write-only property
+        private string _password;
+
+        // Write only property
+        public string Password 
+        { set
+            {
+                _password = value;
+            }
+        }
+
         // Read only property
         public int Id { 
             get

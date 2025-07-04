@@ -79,6 +79,8 @@ namespace BasicsOfClassesAndObjects
             Console.WriteLine("Customer 4 id is: " + myCustomer4.Id);
             // myCustomer4.Id = 3; // causes error becasue it is a read only property
 
+            myCustomer4.Password = "12312#^$#!^NTRENWRT";
+
             Console.ReadKey();
         }
     }
