@@ -59,7 +59,7 @@ namespace BasicsOfClassesAndObjects
 
             // Computed properties use case:
 
-            Rectangle_CalculatedProperty r1 = new Rectangle_CalculatedProperty();
+            Rectangle_CalculatedProperty r1 = new Rectangle_CalculatedProperty("Red");
             r1.Width = 5;
             r1.Height = 5;
             // r1.Area = 5; // Causes error, we have only 'get' and no 'set' 
@@ -80,6 +80,16 @@ namespace BasicsOfClassesAndObjects
             // myCustomer4.Id = 3; // causes error becasue it is a read only property
 
             myCustomer4.Password = "12312#^$#!^NTRENWRT";
+
+            // Examples with const and readonly - with class: Rectangle_CalculatedProperty
+
+            Console.WriteLine("Const and readonly examples:");
+
+            Rectangle_CalculatedProperty rect1 = new Rectangle_CalculatedProperty("Red");
+            Rectangle_CalculatedProperty rect2 = new Rectangle_CalculatedProperty("Blue");
+
+            rect1.DisplayDetails();
+            rect2.DisplayDetails();
 
             Console.ReadKey();
         }
