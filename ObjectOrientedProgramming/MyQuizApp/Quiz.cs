@@ -8,5 +8,16 @@ namespace MyQuizApp
 {
     internal class Quiz
     {
+        private Questions[] questions;
+
+        public Quiz(Questions[] questions)
+        {
+            this.questions = questions;
+        }
+
+        public void DisplayQuestion(Questions question)
+        {
+            Console.WriteLine(question.QuestionText);
+        }
     }
 }
