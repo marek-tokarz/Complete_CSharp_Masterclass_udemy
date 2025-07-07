@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicsOfClassesAndObjects",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyQuizApp", "MyQuizApp\MyQuizApp.csproj", "{09382DFB-3AA8-4724-AC92-8CECAACB6952}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Person", "Person\Person.csproj", "{1E34D5FB-CE95-4041-82C0-9C3E7C3E04AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{09382DFB-3AA8-4724-AC92-8CECAACB6952}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09382DFB-3AA8-4724-AC92-8CECAACB6952}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09382DFB-3AA8-4724-AC92-8CECAACB6952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E34D5FB-CE95-4041-82C0-9C3E7C3E04AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E34D5FB-CE95-4041-82C0-9C3E7C3E04AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E34D5FB-CE95-4041-82C0-9C3E7C3E04AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E34D5FB-CE95-4041-82C0-9C3E7C3E04AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
