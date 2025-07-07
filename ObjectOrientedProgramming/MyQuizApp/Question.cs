@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyQuizApp
 {
-    internal class Questions
+    internal class Question
     {
         public string QuestionText { get; set; }
 
@@ -15,7 +15,7 @@ namespace MyQuizApp
 
         public int CorrectAnswerIndex { get; set; }
 
-        public Questions(string questionText, string[] answers, int correctAnswerIndex)
+        public Question(string questionText, string[] answers, int correctAnswerIndex)
         {
             QuestionText = questionText;
             Answers = answers;
