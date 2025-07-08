@@ -10,6 +10,27 @@
             colors.Add("Red");
             colors.Add("Green");
             colors.Add("Blue");
+            colors.Add("Red");
+
+            Console.WriteLine("Colors in a list:");
+
+            foreach (string color in colors)
+            {
+                Console.WriteLine(color);
+            }
+
+            // Deletes a first occurence of a specific object
+            bool isDeleteSuccesful = colors.Remove("Red");
+
+            Console.WriteLine("Delete returned (before loop): " + isDeleteSuccesful);
+
+            // will remove all "Red" from a list 
+            while (isDeleteSuccesful)
+            {
+                isDeleteSuccesful = colors.Remove("Red");
+            }
+
+            Console.WriteLine("Delete returned (after a loop): " + isDeleteSuccesful);
 
             Console.WriteLine("Colors in a list:");
 
