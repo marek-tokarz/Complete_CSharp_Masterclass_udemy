@@ -36,7 +36,7 @@
 
             // Sorting a list with method
 
-            List<int> numbers = new List<int> {10,5,15,3,9};
+            List<int> numbers = new List<int> {10, 5, 15, 3, 9, 21, 16,33};
 
             Console.WriteLine("Unsorted");
             foreach (int number in numbers)
@@ -66,7 +66,20 @@
                 Console.WriteLine(number);
             }
 
-            Console.ReadLine();  
+            // Predciate with a method 'Any()'
+
+            bool hasNumberHigherThan20 = numbers.Any(x => x > 20);
+
+            if (hasNumberHigherThan20)
+            {
+                Console.WriteLine("There are numbers higher than 20");
+            }
+            else
+            {
+                Console.WriteLine("There is no numbers higher than 20");
+            }
+
+                Console.ReadLine();  
         }
 
         public static bool IsGreaterThanTen(int x)
