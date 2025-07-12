@@ -5,12 +5,7 @@
         static void Main(string[] args)
         {
             // Declaring and initalizing a List
-            List<string> colors = new List<string>();
-
-            colors.Add("Red");
-            colors.Add("Green");
-            colors.Add("Blue");
-            colors.Add("Red");
+            List<string> colors = ["Red", "Green", "Blue", "Red"];
 
             Console.WriteLine("Colors in a list:");
 
