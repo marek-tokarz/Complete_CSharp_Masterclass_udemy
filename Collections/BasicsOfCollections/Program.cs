@@ -34,6 +34,24 @@
                 Console.WriteLine(color);
             }
 
+            // Sorting a list with method
+
+            List<int> numbers = new List<int> {10,5,15,3,9};
+
+            Console.WriteLine("Unsorted");
+            foreach (int number in numbers)
+            {
+                Console.WriteLine(number);
+            }
+
+            numbers.Sort();
+
+            Console.WriteLine("Sorted");
+            foreach (int number in numbers)
+            {
+                Console.WriteLine(number);
+            }
+
             Console.ReadLine();
         }
     }
