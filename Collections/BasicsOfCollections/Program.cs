@@ -54,15 +54,17 @@
 
             // Finding elements in a list
 
-            // This will return a list of numbers that are higher and equal to 10
-            List<int> higherEqual10 = numbers.FindAll(x => x >= 10);
+            // Define the predicate to check if a number is greater than 10
+            Predicate<int> isGreaterThanTen = x => x > 10;
 
-            Console.WriteLine("List of numbers higher and equal 10");
-            foreach (int number in higherEqual10)
+            // This will return a list of numbers that are higher and equal to 10
+            List<int> higher10 = numbers.FindAll(isGreaterThanTen);
+
+            Console.WriteLine("List of numbers higher than 10");
+            foreach (int number in higher10)
             {
                 Console.WriteLine(number);
             }
-
 
             Console.ReadLine();
         }
