@@ -1,9 +1,17 @@
 ﻿namespace BasicsOfCollections
 {
+    public class Product
+    {
+        public string Name { get; set; }
+
+        public double Price { get; set; }
+    }
+
     internal class Program
     {
         static void Main(string[] args)
         {
+            /*
             // Declaring and initalizing a List
             List<string> colors = ["Red", "Green", "Blue", "Red"];
 
@@ -78,8 +86,27 @@
             {
                 Console.WriteLine("There is no numbers higher than 20");
             }
+            */
 
-                Console.ReadLine();  
+            // Using Lists with Complex Objects
+
+            List<Product> products = new List<Product>
+            { 
+                new Product { Name = "Apple", Price = 0.80},
+                new Product {Name = "Banana", Price = 0.30},
+                new Product {Name = "Cherry", Price = 3.80},
+            };
+
+            products.Add(new Product { Name = "Berries", Price = 2.99 });
+
+            Console.WriteLine("Available products:");
+
+            foreach (Product product in products)
+            {
+                Console.WriteLine($"Product name: {product.Name} for {product.Price}");
+            }
+
+            Console.ReadLine();  
         }
 
         public static bool IsGreaterThanTen(int x)
