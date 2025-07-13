@@ -10,6 +10,23 @@ namespace BasicsOfCollections
         public double Price { get; set; }
     }
 
+    public class Student
+    {
+        // property - Id
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
+        public float GPA { get; set; }
+
+        public Student(int id, string name, float GPA)
+        {
+            this.Id = id;
+            this.Name = name;
+            this. GPA = GPA;
+        }
+    }
+
     internal class Program
     {
         static void Main(string[] args)
@@ -121,6 +138,7 @@ namespace BasicsOfCollections
             }
             */
 
+            /*
             // ArrayList
 
             // declaring an ArrayList with undefined amount of objects
@@ -162,6 +180,43 @@ namespace BasicsOfCollections
             }
 
             Console.WriteLine("Sum is: " + sum);
+            */
+
+            // Hashtables
+            // Key - Value pair
+
+            Hashtable studentsTable = new Hashtable();
+
+            Student stud1 = new Student(1, "Maria", 98);
+            Student stud2 = new Student(2, "Jason", 76);
+            Student stud3 = new Student(3, "Clara", 76);
+            Student stud4 = new Student(4, "Steve", 55);
+
+            studentsTable.Add(stud1.Id, stud1);
+            studentsTable.Add(stud2.Id, stud2);
+            studentsTable.Add(stud3.Id, stud3);
+            studentsTable.Add(stud4.Id, stud4);
+
+            // retrieve an individual item with known ID
+            // casting from object (a type kept in a Hashtable) to a 'Student' type
+            Student storedStudent1 = (Student)studentsTable[stud1.Id];
+
+            // retrieve all values from a Hashtable
+            foreach(DictionaryEntry entry in studentsTable)
+            {
+                Student temp = (Student)entry.Value;
+                Console.WriteLine("Student ID:{0}", temp.Id);
+                Console.WriteLine("Student Name:{0}", temp.Name);
+                Console.WriteLine("Student GPA:{0}", temp.GPA);
+            }
+
+            // Simplifying above loop
+            foreach(Student value in studentsTable.Values)
+            {
+                Console.WriteLine("Student ID:{0}", value.Id);
+                Console.WriteLine("Student Name:{0}", value.Name);
+                Console.WriteLine("Student GPA:{0}", value.GPA);
+            }
 
             Console.ReadLine();  
         }
