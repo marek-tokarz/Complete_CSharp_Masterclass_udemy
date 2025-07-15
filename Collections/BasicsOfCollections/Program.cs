@@ -28,6 +28,22 @@ namespace BasicsOfCollections
         }
     }
 
+    class Employee
+    {
+        public string Name { get; set; }
+
+        public int Age { get; set; }
+
+        public int Salary { get; set; }
+
+        public Employee(string name, int age, int salary)
+        {
+            Name = name;
+            Age = age;
+            Salary = salary;
+        }
+    }
+
     internal class Program
     {
         static void Main(string[] args)
@@ -293,6 +309,22 @@ namespace BasicsOfCollections
             foreach (KeyValuePair<int, string> employee in employees)
             {
                 Console.WriteLine($"ID: {employee.Key}, Name: {employee.Value}");
+            }
+
+            Dictionary<int, Employee> employees2 = new Dictionary<int, Employee>();
+
+            employees2.Add(1, new Employee("John Does", 35, 100000));
+            employees2.Add(2, new Employee("John Doesnt", 25, 200000));
+            employees2.Add(3, new Employee("John Wasnt", 35, 80000));
+            employees2.Add(4, new Employee("John Will", 15, 50000));
+
+            foreach (var item in employees2)
+            {
+                Console.WriteLine(
+                    $"ID: {item.Key} named {item.Value.Name} "
+                        + $"earns {item.Value.Salary}"
+                        + $" and is {item.Value.Age} age years old"
+                );
             }
 
             Console.ReadLine();
