@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Net.WebSockets;
 
@@ -324,6 +325,37 @@ namespace BasicsOfCollections
                     $"ID: {item.Key} named {item.Value.Name} "
                         + $"earns {item.Value.Salary}"
                         + $" and is {item.Value.Age} age years old"
+                );
+            }
+
+            // Simple exercise with Dictionary
+            // Dictionary<string, List<int>> dictionary = new Dictionary<string, List<int>>();
+
+            // dictionary.Add("First", new List<int> { 1, 2, 3 });
+
+            // foreach (int liczba in dictionary["First"])
+            // {
+            //     Console.Write(liczba + " ");
+            // }
+
+            var codes = new Dictionary<string, string>
+            {
+                ["NY"] = "New York",
+                ["CA"] = "California",
+                ["TX"] = "Texas",
+            };
+
+            string state;
+
+            if (codes.TryGetValue("NY", out state))
+            {
+                Console.WriteLine(state);
+            }
+
+            foreach (var item in codes)
+            {
+                Console.WriteLine(
+                    $"The statecode is {item.Key} " + "and the state name is {item.Value}"
                 );
             }
 
