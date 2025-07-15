@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Diagnostics.CodeAnalysis;
+using System.Net.WebSockets;
 
 namespace BasicsOfCollections
 {
@@ -220,6 +221,7 @@ namespace BasicsOfCollections
             }
             */
 
+            /*
             // nullables
 
             // now int becomes a nullable value
@@ -239,6 +241,58 @@ namespace BasicsOfCollections
                 // Message = Nullable object must have a value.
 
                 Console.WriteLine("Age is not specified");
+            }
+            */
+
+            // Dictionary
+
+            // key - value
+            // each key is unique in a Dictionary
+
+            Dictionary<int, string> employees = new Dictionary<int, string>();
+
+            employees.Add(101, "John Doe");
+            employees.Add(102, "Bob Smith");
+            employees.Add(103, "Rob Smith");
+            employees.Add(104, "Flob Smith");
+            employees.Add(105, "Dob Smith");
+
+            // accesing items in a Dictionary
+            string name = employees[101];
+
+            Console.WriteLine(name);
+
+            // update dta in a dictionary
+            employees[102] = "Jane Smith";
+
+            employees.Remove(101);
+
+            // will cause an error, because this key already exists
+            // employees.Add(104, "Mike Jike");
+
+            if (!employees.ContainsKey(104))
+            {
+                employees.Add(104, "Mike Jike");
+            }
+
+            int counter = 101;
+
+            while (employees.ContainsKey(counter))
+            {
+                counter++;
+            }
+            employees.Add(counter, "Tom Clancy");
+
+            bool added = employees.TryAdd(102, "Michael Brims");
+
+            if (!added)
+            {
+                Console.WriteLine("Emplyee with ID 102 already exists!");
+            }
+
+            foreach (KeyValuePair<int, string> employee in employees)
+            {
+                Console.WriteLine($"ID: {employee.Key}, Name: {employee.Value}");
             }
 
             Console.ReadLine();
