@@ -23,7 +23,7 @@ namespace BasicsOfCollections
         {
             this.Id = id;
             this.Name = name;
-            this. GPA = GPA;
+            this.GPA = GPA;
         }
     }
 
@@ -47,7 +47,7 @@ namespace BasicsOfCollections
 
             Console.WriteLine("Delete returned (before loop): " + isDeleteSuccesful);
 
-            // will remove all "Red" from a list 
+            // will remove all "Red" from a list
             while (isDeleteSuccesful)
             {
                 isDeleteSuccesful = colors.Remove("Red");
@@ -112,7 +112,7 @@ namespace BasicsOfCollections
             // Using Lists with Complex Objects
 
             List<Product> products = new List<Product>
-            { 
+            {
                 new Product { Name = "Apple", Price = 0.80},
                 new Product {Name = "Banana", Price = 0.30},
                 new Product {Name = "Cherry", Price = 3.80},
@@ -156,7 +156,7 @@ namespace BasicsOfCollections
             // deletes a specific element
             myArrayList.Remove(13);
 
-            // deletes an element at a specific position 
+            // deletes an element at a specific position
             myArrayList.RemoveAt(0);
 
             Console.WriteLine(myArrayList.Count);
@@ -167,7 +167,7 @@ namespace BasicsOfCollections
             {
                 if(obj is int)
                 {
-                    sum += Convert.ToDouble(obj); 
+                    sum += Convert.ToDouble(obj);
                 }
                 else if(obj is double)
                 {
@@ -182,6 +182,7 @@ namespace BasicsOfCollections
             Console.WriteLine("Sum is: " + sum);
             */
 
+            /*
             // Hashtables
             // Key - Value pair
 
@@ -217,8 +218,30 @@ namespace BasicsOfCollections
                 Console.WriteLine("Student Name:{0}", value.Name);
                 Console.WriteLine("Student GPA:{0}", value.GPA);
             }
+            */
 
-            Console.ReadLine();  
+            // nullables
+
+            // now int becomes a nullable value
+            int? age = null;
+            int myAge = 35;
+
+            if (age.HasValue)
+            {
+                Console.WriteLine("Age is: " + age.Value);
+                int sum = age.Value + myAge;
+            }
+            else
+            {
+                // this will cause exception
+                // int sum = age.Value + myAge;
+                // System.InvalidOperationException
+                // Message = Nullable object must have a value.
+
+                Console.WriteLine("Age is not specified");
+            }
+
+            Console.ReadLine();
         }
 
         public static bool IsGreaterThanTen(int x)
