@@ -1,10 +1,15 @@
-﻿namespace BasicsOfTryAndCatch
+﻿using System.Diagnostics;
+
+namespace BasicsOfTryAndCatch
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             int result = 0;
+
+            Debug.WriteLine("Main method is running");
+
             try
             {
                 Console.WriteLine("Please enter a number");
@@ -20,6 +25,11 @@
             {
                 Console.WriteLine(ex.ToString());
                 Console.WriteLine(ex.Message);
+                Debug.WriteLine(ex.StackTrace);
+            }
+            finally
+            {
+                Console.WriteLine("This always executes");
             }
 
             Console.WriteLine("Result: " + result);
