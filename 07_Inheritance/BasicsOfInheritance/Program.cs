@@ -4,9 +4,18 @@
     {
         static void Main(string[] args)
         {
+            /*
             Dog myDog = new Dog();
             myDog.Bark();
             myDog.Eat();
+            */
+
+            BaseClass baseClass = new BaseClass();
+            baseClass.ShowFields();
+
+            DerivedClass derivedClass = new DerivedClass();
+            derivedClass.AccesFields();
+            derivedClass.ShowFields();
 
             Console.ReadKey();
         }
@@ -48,6 +57,35 @@
         public void GoingNuts()
         {
             Console.WriteLine("Collie going nuts");
+        }
+    }
+
+    // Access modifiers and protected keyword
+    class BaseClass
+    {
+        // access modifiers
+        public int publicField;
+        protected int protectedField;
+        private int privateField;
+
+        public void ShowFields()
+        {
+            Console.WriteLine(
+                $"Public: {publicField}, "
+                    + $"Protected: {protectedField} "
+                    + $"Private {privateField}"
+            );
+        }
+    }
+
+    class DerivedClass : BaseClass
+    {
+        public void AccesFields()
+        {
+            publicField = 1;
+            protectedField = 2;
+            // CAUSES AN ERROR
+            // privateField = 3;
         }
     }
 }
