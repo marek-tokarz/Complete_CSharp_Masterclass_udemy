@@ -6,7 +6,7 @@ namespace BasicsOfTryAndCatch
     {
         static void Main(string[] args)
         {
-            
+            /*
             int result = 0;
 
             Debug.WriteLine("Main method is running");
@@ -54,7 +54,27 @@ namespace BasicsOfTryAndCatch
             Console.WriteLine("Enter your age");
             int age = GetUserAge(Console.ReadLine());
 
+            */
+
+            try
+            {
+                LevelOne();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception caught in Main: " + ex.Message);
+            }
             Console.ReadKey();
+        }
+
+        static void LevelOne()
+        {
+            LevelTwo();
+        }
+
+        static void LevelTwo()
+        {
+            throw new Exception("Something went wrong!");
         }
 
         static int GetUserAge(string input)
