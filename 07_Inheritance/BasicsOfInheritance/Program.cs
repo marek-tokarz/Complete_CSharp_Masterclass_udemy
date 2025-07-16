@@ -29,4 +29,25 @@
             Console.WriteLine("Barking...");
         }
     }
+
+    // Two classes (Dog and Cat) derive from a base class (Animal)
+    // This is hierarchical inheritance
+    class Cat : Animal
+    {
+        public void Meaow()
+        {
+            Console.WriteLine("Cat is meowing");
+        }
+    }
+
+    // Next level of inheritance:
+    // Animal -> Dog -> Collie
+    // This is a Multi Level Inheritance
+    class Collie : Dog
+    {
+        public void GoingNuts()
+        {
+            Console.WriteLine("Collie going nuts");
+        }
+    }
 }
