@@ -4,18 +4,28 @@
     {
         static void Main(string[] args)
         {
+            // Basics of inheritance
             /*
             Dog myDog = new Dog();
             myDog.Bark();
             myDog.Eat();
             */
 
+            // Access modifiers
+            /*
             BaseClass baseClass = new BaseClass();
             baseClass.ShowFields();
 
             DerivedClass derivedClass = new DerivedClass();
             derivedClass.AccesFields();
             derivedClass.ShowFields();
+            */
+
+            Dog myDog = new Dog();
+            myDog.MakeSound();
+
+            Cat myCat = new Cat();
+            myCat.MakeSound();
 
             Console.ReadKey();
         }
@@ -28,12 +38,17 @@
         {
             Console.WriteLine("Eating...");
         }
+
+        public virtual void MakeSound()
+        {
+            Console.WriteLine("Animal makes a generic sound");
+        }
     }
 
     // Derived Class
     class Dog : Animal
     {
-        public void Bark()
+        public override void MakeSound()
         {
             Console.WriteLine("Barking...");
         }
@@ -43,7 +58,7 @@
     // This is hierarchical inheritance
     class Cat : Animal
     {
-        public void Meaow()
+        public override void MakeSound()
         {
             Console.WriteLine("Cat is meowing");
         }
