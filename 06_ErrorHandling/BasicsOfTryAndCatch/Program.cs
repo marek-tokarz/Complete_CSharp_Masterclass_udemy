@@ -6,6 +6,7 @@ namespace BasicsOfTryAndCatch
     {
         static void Main(string[] args)
         {
+            /*
             int result = 0;
 
             Debug.WriteLine("Main method is running");
@@ -26,6 +27,7 @@ namespace BasicsOfTryAndCatch
                 Console.WriteLine(ex.ToString());
                 Console.WriteLine(ex.Message);
                 Debug.WriteLine(ex.StackTrace);
+                Debug.WriteLine(ex.ToString());
             }
             finally
             {
@@ -33,8 +35,28 @@ namespace BasicsOfTryAndCatch
             }
 
             Console.WriteLine("Result: " + result);
+            */
+
+            // 'throw' keyword, throwing own exceptions
+
+            Console.WriteLine("Enter your age");
+            int age = GetUserAge(Console.ReadLine());
 
             Console.ReadKey();
+        }
+
+        static int GetUserAge(string input)
+        {
+            int age;
+            if (!int.TryParse(input, out age))
+            {
+                throw new Exception("You didn't enter a valid age");
+            }
+            if (age < 0 || age > 120)
+            {
+                throw new Exception("Your age must be between 0 and 120.");
+            }
+            return age;
         }
     }
 }
