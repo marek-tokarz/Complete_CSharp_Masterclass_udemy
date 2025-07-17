@@ -43,6 +43,10 @@
 
             carl.DisplayManagerInfo();
 
+            Console.WriteLine(carl.ToString());
+
+            carl.BecomeOlder(5);
+
             Console.ReadKey();
         }
     }
@@ -141,6 +145,15 @@
         public void DisplayPersonInfo()
         {
             Console.WriteLine($"Name: {Name}, Age {Age}");
+        }
+
+        /// <summary>Makes our object older.</summary>
+        /// <param name="years">The parameter that indicates the amount of years the object should age.</param>
+        /// <returns>Returns new age after aging.</returns>
+        public int BecomeOlder(int years)
+        {
+            Age = Age + years;
+            return Age;
         }
     }
 
