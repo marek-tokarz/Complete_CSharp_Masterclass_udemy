@@ -50,6 +50,9 @@
     {
         public override void MakeSound()
         {
+            // calling a method from a base class
+            base.MakeSound();
+
             Console.WriteLine("Barking...");
         }
     }
