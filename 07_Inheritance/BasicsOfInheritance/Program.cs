@@ -34,8 +34,14 @@
             joe.DisplayPersonInfo();
             */
 
+            /*
             Employee joe = new Employee("Joe", 36, "Sales Rep", 12345);
             joe.DisplayEmployeeInfo();
+            */
+
+            Manager carl = new Manager("Carl", 45, "Manager", 123123, 7);
+
+            carl.DisplayManagerInfo();
 
             Console.ReadKey();
         }
@@ -159,6 +165,23 @@
         {
             DisplayPersonInfo();
             Console.WriteLine($"Job Title: {JobTitle}, EmployeeID: {EmployeeId} ");
+        }
+    }
+
+    public class Manager : Employee
+    {
+        public int TeamSize { get; private set; }
+
+        public Manager(string name, int age, string jobTitle, int employeeId, int teamSize)
+            : base(name, age, jobTitle, employeeId)
+        {
+            TeamSize = teamSize;
+        }
+
+        public void DisplayManagerInfo()
+        {
+            DisplayEmployeeInfo();
+            Console.WriteLine($"Team size: {TeamSize}");
         }
     }
 }
