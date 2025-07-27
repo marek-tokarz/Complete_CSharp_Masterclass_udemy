@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogingToTextFile", "LogingT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjectionApp", "DependencyInjectionApp\DependencyInjectionApp.csproj", "{62D6B2E4-9187-48F1-AA86-C2638F5E482B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIMultipleInheritance", "DIMultipleInheritance\DIMultipleInheritance.csproj", "{5FCE1064-2EF4-401C-8448-3208D7CDFB2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{62D6B2E4-9187-48F1-AA86-C2638F5E482B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62D6B2E4-9187-48F1-AA86-C2638F5E482B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62D6B2E4-9187-48F1-AA86-C2638F5E482B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FCE1064-2EF4-401C-8448-3208D7CDFB2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FCE1064-2EF4-401C-8448-3208D7CDFB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FCE1064-2EF4-401C-8448-3208D7CDFB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FCE1064-2EF4-401C-8448-3208D7CDFB2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
