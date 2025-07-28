@@ -2,18 +2,26 @@
 {
     public struct Point
     {
+        
+        public double X { get; set; }
+        public double Y { get; set; }
+        
         /*
-        public int X { get; set; }
-        public int Y { get; set; }
-         */
-
         public int X;
         public int Y;
+        */
 
-        public Point(int x, int y)
+        public Point(double x, double y)
         {
             X = x;
             Y = y;
+        }
+
+        public double DistanceTo(Point other)
+        {
+            double dx = other.X - X;
+            double dy = other.Y - Y;
+            return Math.Sqrt(dx * dx + dy * dy);
         }
 
         public void Display()
@@ -36,7 +44,8 @@
             p2.Y = 20;
             */
 
-            Point p2;
+            // with properties values must be assigned at initalization
+            Point p2 = new Point(1,2);
             p2.X = 1;
             p2.Y = 2;
             p2.Display();
@@ -47,6 +56,9 @@
             p3.X = 50;
             p3.Display();
 
+            double distance = p1.DistanceTo(p2);
+            Console.WriteLine($"Distance between points: {distance:F2}");
+            
             Console.ReadKey();
         }
     }
