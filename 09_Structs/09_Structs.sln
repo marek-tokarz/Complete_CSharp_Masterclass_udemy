@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36212.18 d17.14
+VisualStudioVersion = 17.14.36212.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicsOfStructs", "BasicsOfStructs\BasicsOfStructs.csproj", "{5C38812E-BFFC-4568-A3B8-F66CA8F81D8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueTypeVsReferenceType_StructVsClass", "ValueTypeVsReferenceType_StructVsClass\ValueTypeVsReferenceType_StructVsClass.csproj", "{5C5B3229-6CAC-4A8C-BD7F-DADE5DD35565}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5C38812E-BFFC-4568-A3B8-F66CA8F81D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C38812E-BFFC-4568-A3B8-F66CA8F81D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C38812E-BFFC-4568-A3B8-F66CA8F81D8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C5B3229-6CAC-4A8C-BD7F-DADE5DD35565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C5B3229-6CAC-4A8C-BD7F-DADE5DD35565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C5B3229-6CAC-4A8C-BD7F-DADE5DD35565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C5B3229-6CAC-4A8C-BD7F-DADE5DD35565}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
