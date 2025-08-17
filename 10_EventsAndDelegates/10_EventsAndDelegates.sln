@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36408.4 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicsOfDelegates", "BasicsOfDelegates\BasicsOfDelegates.csproj", "{3A531668-D117-4A85-BEA5-BA1F9BB0C0D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateExampleLogHandler", "DelegateExampleLogHandler\DelegateExampleLogHandler.csproj", "{3A0E9DB1-4972-4702-95CD-D084FCBCFCFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3A531668-D117-4A85-BEA5-BA1F9BB0C0D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A531668-D117-4A85-BEA5-BA1F9BB0C0D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A531668-D117-4A85-BEA5-BA1F9BB0C0D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A0E9DB1-4972-4702-95CD-D084FCBCFCFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A0E9DB1-4972-4702-95CD-D084FCBCFCFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A0E9DB1-4972-4702-95CD-D084FCBCFCFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A0E9DB1-4972-4702-95CD-D084FCBCFCFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
