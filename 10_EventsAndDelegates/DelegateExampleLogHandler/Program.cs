@@ -24,11 +24,22 @@
             
             // delegate LogHandler - assigning a lmethod from a class Logger
             LogHandler logHandler = logger.LogToConsole;
+            /*
             logHandler("Logging to console");
 
             // overriding a logHandler with another method
             logHandler = logger.LogToFile;
             logHandler("Logging to file");
+            */
+
+            // Multicast delegate
+            logHandler += logger.LogToFile;
+
+            logHandler("Log this info");
+
+            logHandler -= logger.LogToFile;
+
+            logHandler("After removing a logToFile");
 
             Console.ReadKey();
         }
