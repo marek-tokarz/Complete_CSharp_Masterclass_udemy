@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateExampleLogHandler",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicsOfGenerics", "BasicsOfGenerics\BasicsOfGenerics.csproj", "{9FF0DFC8-8E04-4DD5-BDFD-7808953F8A5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesGenericsSortingAlgorithm", "DelegatesGenericsSortingAlgorithm\DelegatesGenericsSortingAlgorithm.csproj", "{28D5D4A3-E8A7-4308-B3B4-638591B4D28E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9FF0DFC8-8E04-4DD5-BDFD-7808953F8A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FF0DFC8-8E04-4DD5-BDFD-7808953F8A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FF0DFC8-8E04-4DD5-BDFD-7808953F8A5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28D5D4A3-E8A7-4308-B3B4-638591B4D28E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D5D4A3-E8A7-4308-B3B4-638591B4D28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28D5D4A3-E8A7-4308-B3B4-638591B4D28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28D5D4A3-E8A7-4308-B3B4-638591B4D28E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
