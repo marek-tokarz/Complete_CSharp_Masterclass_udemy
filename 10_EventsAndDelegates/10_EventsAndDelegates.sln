@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesGenericsSortingAlg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroToEvents", "IntroToEvents\IntroToEvents.csproj", "{97908AFE-6500-4A8A-95C4-CE4533D369B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureAlertHandler", "TemperatureAlertHandler\TemperatureAlertHandler.csproj", "{14B3A076-FAB4-45D8-AF9D-59B0C2D346D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{97908AFE-6500-4A8A-95C4-CE4533D369B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97908AFE-6500-4A8A-95C4-CE4533D369B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97908AFE-6500-4A8A-95C4-CE4533D369B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14B3A076-FAB4-45D8-AF9D-59B0C2D346D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14B3A076-FAB4-45D8-AF9D-59B0C2D346D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14B3A076-FAB4-45D8-AF9D-59B0C2D346D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14B3A076-FAB4-45D8-AF9D-59B0C2D346D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
