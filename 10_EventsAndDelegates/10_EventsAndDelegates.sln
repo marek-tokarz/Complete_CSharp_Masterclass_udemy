@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36408.4 d17.14
+VisualStudioVersion = 17.14.36408.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicsOfDelegates", "BasicsOfDelegates\BasicsOfDelegates.csproj", "{3A531668-D117-4A85-BEA5-BA1F9BB0C0D4}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicsOfGenerics", "BasicsOfGenerics\BasicsOfGenerics.csproj", "{9FF0DFC8-8E04-4DD5-BDFD-7808953F8A5F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesGenericsSortingAlgorithm", "DelegatesGenericsSortingAlgorithm\DelegatesGenericsSortingAlgorithm.csproj", "{28D5D4A3-E8A7-4308-B3B4-638591B4D28E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroToEvents", "IntroToEvents\IntroToEvents.csproj", "{97908AFE-6500-4A8A-95C4-CE4533D369B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{28D5D4A3-E8A7-4308-B3B4-638591B4D28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28D5D4A3-E8A7-4308-B3B4-638591B4D28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28D5D4A3-E8A7-4308-B3B4-638591B4D28E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97908AFE-6500-4A8A-95C4-CE4533D369B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97908AFE-6500-4A8A-95C4-CE4533D369B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97908AFE-6500-4A8A-95C4-CE4533D369B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97908AFE-6500-4A8A-95C4-CE4533D369B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
