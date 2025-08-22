@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroToEvents", "IntroToEve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureAlertHandler", "TemperatureAlertHandler\TemperatureAlertHandler.csproj", "{14B3A076-FAB4-45D8-AF9D-59B0C2D346D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockPriceAlertSystem", "StockPriceAlertSystem\StockPriceAlertSystem.csproj", "{9522C6CB-9141-4908-85A1-67A9603790F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{14B3A076-FAB4-45D8-AF9D-59B0C2D346D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14B3A076-FAB4-45D8-AF9D-59B0C2D346D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14B3A076-FAB4-45D8-AF9D-59B0C2D346D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9522C6CB-9141-4908-85A1-67A9603790F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9522C6CB-9141-4908-85A1-67A9603790F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9522C6CB-9141-4908-85A1-67A9603790F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9522C6CB-9141-4908-85A1-67A9603790F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
