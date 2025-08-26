@@ -13,7 +13,12 @@
             <ColumnDefinition Width="200" />
             <ColumnDefinition Width="100" />
         </Grid.ColumnDefinitions>
-        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
         <Label Content="Hello World" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
     </Grid>
