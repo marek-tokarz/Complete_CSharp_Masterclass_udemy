@@ -14,3 +14,54 @@ obj/
 # Ignoruj pliki specyficzne dla Visual Studio
 .vs/
 *.user
+
+# Opcje kompilacji Visual Studio (WPF)
+**/Debug/
+**/Release/
+*.exe
+*.dll
+*.pdb
+*.obj
+*.suo
+*.userprefs
+*.vs/
+_ReSharper*/
+
+# Foldery i pliki specyficzne dla systemu operacyjnego
+[Bb]in/
+[Oo]bj/
+*.log
+*.tmp
+*.*~
+*/[Ll]og/
+
+# Pakiety NuGet
+packages/
+*.nupkg
+*.config
+project.lock.json
+
+# Pliki Visual Studio
+*.vssscc
+*.vsscc
+*.vspscc
+*.tsscc
+*.dspscc
+*.sln.docstates
+*.sln.cache
+*.suo
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.opendb
+*.opensdf
+*.unsuccessfulbuild
+
+# Specyficzne ustawienia użytkownika programu Visual Studio
+*.csproj.user
+
+# Pliki Resharper
+_ReSharper*/
+
+# Pliki tymczasowe systemowe
+Temporary Files/*
