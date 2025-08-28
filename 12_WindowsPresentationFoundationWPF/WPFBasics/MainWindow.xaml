@@ -28,7 +28,7 @@
 
         <Label Grid.Row="1" Grid.Column="2" Content="Title of App"/>
         <Label Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3"  Content="Sample Text Sample Text Sample Text Sample Text"/>
-        <Button Grid.Row="3" Grid.Column="2" Content="A"/>
+        <Button Grid.Row="3" Grid.Column="2" Content="A" Click="Button_Click"/>
 
     </Grid>
 </Window>

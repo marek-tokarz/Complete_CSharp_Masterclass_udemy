@@ -20,6 +20,7 @@ namespace WPFBasics
         {
             InitializeComponent();
 
+            /*
             Button myButton = new Button();
             myButton.Content = "B";
 
@@ -28,6 +29,15 @@ namespace WPFBasics
 
             Grid myGrid = (Grid)FindName("myGrid");
             myGrid.Children.Add(myButton);
+            */
+
+
+
+        }
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hello World");
         }
     }
 }
