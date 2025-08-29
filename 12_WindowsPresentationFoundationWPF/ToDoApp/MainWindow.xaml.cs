@@ -20,5 +20,11 @@ namespace ToDoApp
         {
             InitializeComponent();
         }
+
+        private void AddTodoButton_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+
     }
 }
