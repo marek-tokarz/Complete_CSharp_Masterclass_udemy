@@ -16,19 +16,13 @@ using System.Windows.Shapes;
 namespace ContentControlAndUserControl
 {
     /// <summary>
-    /// Logika interakcji dla klasy LoginView.xaml
+    /// Logika interakcji dla klasy InvoiceView.xaml
     /// </summary>
-    public partial class LoginView : UserControl
+    public partial class InvoiceView : UserControl
     {
-        public LoginView()
+        public InvoiceView()
         {
             InitializeComponent();
-        }
-
-        private void LoginButton_Clicked(object sender, RoutedEventArgs e)
-        {
-            Window window = Window.GetWindow(this);
-            window.Content = new InvoiceView();
         }
     }
 }
