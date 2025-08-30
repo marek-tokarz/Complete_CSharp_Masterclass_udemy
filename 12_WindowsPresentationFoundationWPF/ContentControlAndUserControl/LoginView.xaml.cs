@@ -24,5 +24,10 @@ namespace ContentControlAndUserControl
         {
             InitializeComponent();
         }
+
+        private void LoginButton_Clicked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -19,6 +19,8 @@ namespace ContentControlAndUserControl
         public MainWindow()
         {
             InitializeComponent();
+
+            MainContent.Content = new LoginView();
         }
     }
 }
