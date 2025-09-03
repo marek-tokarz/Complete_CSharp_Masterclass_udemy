@@ -30,7 +30,7 @@ namespace ListBox
         {
             InitializeComponent();
 
-            ListBoxNames.ItemsSource = People;
+            ListBoxPeople.ItemsSource = People;
         }
     }
 }
