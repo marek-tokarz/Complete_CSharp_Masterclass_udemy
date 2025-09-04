@@ -19,7 +19,7 @@ namespace InvoiceManagement
         public MainWindow()
         {
             InitializeComponent();
-            MainContent = new LoginView();
+            MainContent.Content = new LoginView();
         }
     }
 }
