@@ -45,5 +45,10 @@ namespace InvoiceManagement
                 MessageBox.Show("Enviroment variable not found");
             }
         }
+
+        public void OnPasswordChanged(object sender, EventArgs e)
+        {
+            LoginButton.IsEnabled = !string.IsNullOrEmpty(PasswordBox.Password);
+        }
     }
 }
