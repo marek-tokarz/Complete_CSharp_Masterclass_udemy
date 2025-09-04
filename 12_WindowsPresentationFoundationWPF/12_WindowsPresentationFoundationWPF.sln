@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding", "DataBinding\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListBox", "ListBox\ListBox.csproj", "{B2CD7968-DB5F-49CC-993F-365AEC43D3FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceManagement", "InvoiceManagement\InvoiceManagement.csproj", "{F46FE1CF-3342-4365-B29E-17DD5C77FD40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B2CD7968-DB5F-49CC-993F-365AEC43D3FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2CD7968-DB5F-49CC-993F-365AEC43D3FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2CD7968-DB5F-49CC-993F-365AEC43D3FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F46FE1CF-3342-4365-B29E-17DD5C77FD40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F46FE1CF-3342-4365-B29E-17DD5C77FD40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F46FE1CF-3342-4365-B29E-17DD5C77FD40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F46FE1CF-3342-4365-B29E-17DD5C77FD40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
