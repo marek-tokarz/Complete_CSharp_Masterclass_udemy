@@ -14,5 +14,21 @@
             <RowDefinition Height="100" />
             <RowDefinition Height="150" />
         </Grid.RowDefinitions>
+        <Border Grid.Row="2" Width="800" CornerRadius="10" BorderThickness="5">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#ec2075" Offset="0.0" />
+                    <GradientStop Color="#f33944" Offset="0.5" />
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Rectangle Grid.Row="2">
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#ec2075" Offset="0.0" />
+                        <GradientStop Color="#f33944" Offset="0.5" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Border>
     </Grid>
 </Window>
