@@ -46,6 +46,11 @@ namespace CurrencyConverter
             cmbFromCurrency.DisplayMemberPath = "Text";
             cmbFromCurrency.SelectedValuePath = "Value";
             cmbFromCurrency.SelectedIndex = 0;
+
+            cmbToCurrency.ItemsSource = dtCurrency.DefaultView;
+            cmbFromCurrency.DisplayMemberPath = "Text";
+            cmbFromCurrency.SelectedValuePath = "Value";
+            cmbFromCurrency.SelectedIndex = 0;
         }
 
         private void Convert_Click(object sender, RoutedEventArgs e)
