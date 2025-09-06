@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace ZooManager
 {
@@ -21,6 +23,8 @@ namespace ZooManager
     /// </summary>
     public partial class MainWindow : Window
     {
+        SqlConnection sqlConnection;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,6 +33,42 @@ namespace ZooManager
 
             string connectionString = ConfigurationManager.ConnectionStrings
                 ["ZooManager.Properties.Settings.MarekDBConnectionString"].ConnectionString;
+
+            sqlConnection = new SqlConnection(connectionString);
+
+            ShowZoos();
+        }
+
+        private void ShowZoos()
+        {
+            try
+            {
+                string query = "select * from Zoo";
+                // adapter of type SqlDataAdapter is like Interface to make Tables usable by C# objects
+                SqlDataAdapter adapter = new SqlDataAdapter(query, sqlConnection);
+
+                using (adapter)
+                {
+                    DataTable zooTable = new DataTable();
+
+                    adapter.Fill(zooTable);
+
+                    // chooses information from a Table in a DataTable in order to show them in ListBox
+                    listZoos.DisplayMemberPath = "Location";
+
+                    // chooses which Valu should be delivered, whan na Item from ListBox is selected
+                    listZoos.SelectedValuePath = "Id";
+
+                    // reference to the Data that the ListBox sholud populate
+                    listZoos.ItemsSource = zooTable.DefaultView;
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+
+            
         }
     }
 }
