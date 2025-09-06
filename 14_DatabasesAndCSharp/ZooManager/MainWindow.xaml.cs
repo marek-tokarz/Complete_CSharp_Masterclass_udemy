@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Configuration;
 
 namespace ZooManager
 {
@@ -23,6 +24,11 @@ namespace ZooManager
         public MainWindow()
         {
             InitializeComponent();
+
+            // SQL string
+
+            string connectionString = ConfigurationManager.ConnectionStrings
+                ["ZooManager.Properties.Settings.MarekDBConnectionString"].ConnectionString;
         }
     }
 }
