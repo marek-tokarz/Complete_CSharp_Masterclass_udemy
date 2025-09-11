@@ -136,11 +136,6 @@ namespace ZooManager
             ShowAssociatedAnimals();
         }
 
-        private void listAssociatedAnimals_Kopiuj_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void DeleteZoo_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -214,6 +209,27 @@ namespace ZooManager
                 SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
                 sqlConnection.Open();
                 sqlCommand.Parameters.AddWithValue("@AnimalId", listAllAnimals.SelectedValue);
+                sqlCommand.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                sqlConnection.Close();
+                ShowAllAnimals();
+            }
+        }
+
+        private void AddAnimal_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string query = "insert into Animal values (@Name)";
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlConnection.Open();
+                sqlCommand.Parameters.AddWithValue("@Name", myTextBox.Text);
                 sqlCommand.ExecuteScalar();
             }
             catch (Exception ex)
