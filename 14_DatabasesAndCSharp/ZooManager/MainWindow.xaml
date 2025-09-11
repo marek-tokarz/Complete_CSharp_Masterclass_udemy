@@ -11,7 +11,7 @@
         <ListBox Name="listZoos" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="23,55,454,242" SelectionChanged="listZoos_SelectionChanged"/>
         <Label Content="Associated Animals List" HorizontalAlignment="Left" Margin="229,24,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="listAssociatedAnimals" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="229,55,248,242"/>
-        <ListBox x:Name="listAllAnimals" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="453,55,24,154"/>
+        <ListBox x:Name="listAllAnimals" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="453,55,24,154" SelectionChanged="listAllAnimals_SelectionChanged"/>
         <Button Content="Delete Zoo" HorizontalAlignment="Left" Margin="23,263,0,0" VerticalAlignment="Top" Width="148" Click="DeleteZoo_Click"/>
         <Button Content="Remove Animal" HorizontalAlignment="Left" Margin="229,263,0,0" VerticalAlignment="Top" Width="148"/>
         <Button Click="AddZoo_Click"  Content="Add Zoo" HorizontalAlignment="Left" Margin="23,353,0,0" VerticalAlignment="Top" Width="148"/>

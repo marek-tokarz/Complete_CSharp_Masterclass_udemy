@@ -134,6 +134,7 @@ namespace ZooManager
             // MessageBox.Show(listZoos.SelectedValue.ToString());
 
             ShowAssociatedAnimals();
+            ShowSelectedZooInTextBox();
         }
 
         private void DeleteZoo_Click(object sender, RoutedEventArgs e)
@@ -222,6 +223,60 @@ namespace ZooManager
             }
         }
 
+        private void ShowSelectedAnimalInTextBox()
+        {
+            try
+            {
+                string query = "select Name from Animal where Id = @AnimalId";
+
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                // adapter of type SqlDataAdapter is like Interface to make Tables usable by C# objects
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+
+                using (adapter)
+                {
+                    sqlCommand.Parameters.AddWithValue("@AnimalId", listAllAnimals.SelectedValue);
+
+                    DataTable zooDataTable = new DataTable();
+
+                    adapter.Fill(zooDataTable);
+
+                    myTextBox.Text = zooDataTable.Rows[0]["Name"].ToString();
+                }
+            }
+            catch (Exception e)
+            {
+                // MessageBox.Show(e.ToString());
+            }
+        }
+
+        private void ShowSelectedZooInTextBox()
+        {
+            try
+            {
+                string query = "select Location from Zoo where Id = @ZooId";
+
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                // adapter of type SqlDataAdapter is like Interface to make Tables usable by C# objects
+                SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+
+                using (adapter)
+                {
+                    sqlCommand.Parameters.AddWithValue("@ZooId", listZoos.SelectedValue);
+
+                    DataTable zooDataTable = new DataTable();
+
+                    adapter.Fill(zooDataTable);
+
+                    myTextBox.Text = zooDataTable.Rows[0]["Location"].ToString();
+                }
+            }
+            catch (Exception e)
+            {
+                // MessageBox.Show(e.ToString());
+            }
+        }
+
         private void AddAnimal_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -241,6 +296,11 @@ namespace ZooManager
                 sqlConnection.Close();
                 ShowAllAnimals();
             }
+        }
+
+        private void listAllAnimals_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ShowSelectedAnimalInTextBox();
         }
     }
 }
