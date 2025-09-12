@@ -7,7 +7,9 @@
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
         Title="CurrencyConverter" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
-    <Grid>
+    <TabControl Name="tbMain" TabStripPlacement="Top">
+        <TabItem Name="tbConverter" Header="Currency Converter">
+            <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60" />
             <RowDefinition Height="80" />
@@ -77,4 +79,8 @@
             <Image Height="150" Width="150" Source="/Images/Logo.png" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="325 0"/>
         </StackPanel>
     </Grid>
+        </TabItem>
+        
+    </TabControl>
+    
 </Window>
