@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -22,14 +25,30 @@ namespace CurrencyConverter
     /// </summary>
     public partial class MainWindow : Window
     {
+        SqlConnection con = new SqlConnection();
+        SqlCommand cmd = new SqlCommand();
+        SqlDataAdapter da = new SqlDataAdapter();
+
+        private int CurrencyId = 0;
+        private double FromAmount = 0;
+        private double ToAmount = 0;
+
         public MainWindow()
         {
             InitializeComponent();
             BindCurrency();
         }
 
+        public void mycon()
+        {
+            String Conn = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            con = new SqlConnection(Conn);
+            con.Open();
+        }
+
         private void BindCurrency()
         {
+            /*
             DataTable dtCurrency = new DataTable();
             dtCurrency.Columns.Add("Text");
             dtCurrency.Columns.Add("Value");
@@ -42,21 +61,47 @@ namespace CurrencyConverter
             dtCurrency.Rows.Add("SAR", 20);
             dtCurrency.Rows.Add("POUND", 5);
             dtCurrency.Rows.Add("DEM", 43);
+            */
 
-            cmbFromCurrency.ItemsSource = dtCurrency.DefaultView;
-            cmbFromCurrency.DisplayMemberPath = "Text";
+            mycon();
+
+            DataTable dt = new DataTable();
+
+            cmd = new SqlCommand("SELECT Id, CurrencyName from CurrencyMaster", con);
+
+            cmd.CommandType = CommandType.Text;
+
+            da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            DataRow newRow = dt.NewRow();
+
+            newRow["Id"] = 0;
+
+            newRow["CurrencyName"] = "--SELECT--";
+
+            dt.Rows.InsertAt(newRow, 0);
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                cmbFromCurrency.ItemsSource = dt.DefaultView;
+
+                cmbToCurrency.ItemsSource = dt.DefaultView;
+            }
+            con.Close();
+
+            cmbFromCurrency.DisplayMemberPath = "CurrencyName";
             cmbFromCurrency.SelectedValuePath = "Value";
             cmbFromCurrency.SelectedIndex = 0;
 
-            cmbToCurrency.ItemsSource = dtCurrency.DefaultView;
-            cmbToCurrency.DisplayMemberPath = "Text";
-            cmbToCurrency.SelectedValuePath = "Value";
+            cmbToCurrency.DisplayMemberPath = "CurrencyName";
+            cmbToCurrency.SelectedValuePath = "Id";
             cmbToCurrency.SelectedIndex = 0;
         }
 
         private void Convert_Click(object sender, RoutedEventArgs e)
         {
-
             //Create the variable as ConvertedValue with double datatype to store currency converted value
             double ConvertedValue;
 
@@ -138,6 +183,66 @@ namespace CurrencyConverter
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                if (txtAmount.Text == null || txtAmount.Text.Trim() == "")
+                {
+                    MessageBox.Show("Please enter amount", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+                    txtAmount.Focus();
+                    return;
+                }
+                else if (txtCurrencyName.Text == null || txtCurrencyName.Text.Trim() == "")
+                {
+                    MessageBox.Show("Please enter currency name", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    //Edit time and set that record Id in CurrencyId variable.
+                    //Code to Update. If CurrencyId greater than zero than it is go for update.
+                    if (CurrencyId > 0)
+                    {
+                        //Show the confirmation message
+                        if (MessageBox.Show("Are you sure you want to update ?", "Information", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                        {
+                            mycon();
+                            DataTable dt = new DataTable();
+
+                            //Update Query Record update using Id
+                            cmd = new SqlCommand("UPDATE CurrencyMaster SET Amount = @Amount, CurrencyName = @CurrencyName WHERE Id = @Id", con);
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Parameters.AddWithValue("@Id", CurrencyId);
+                            cmd.Parameters.AddWithValue("@Amount", txtAmount.Text);
+                            cmd.Parameters.AddWithValue("@CurrencyName", txtCurrencyName.Text);
+                            cmd.ExecuteNonQuery();
+                            con.Close();
+
+                            MessageBox.Show("Data updated successfully", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+                        }
+                    }
+                    // Code to Save
+                    else
+                    {
+                        if (MessageBox.Show("Are you sure you want to save ?", "Information", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                        {
+                            mycon();
+                            //Insert query to Save data in the table
+                            cmd = new SqlCommand("INSERT INTO CurrencyMaster(Amount, CurrencyName) VALUES(@Amount, @CurrencyName)", con);
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Parameters.AddWithValue("@Amount", txtAmount.Text);
+                            cmd.Parameters.AddWithValue("@CurrencyName", txtCurrencyName.Text);
+                            cmd.ExecuteNonQuery();
+                            con.Close();
+
+                            MessageBox.Show("Data saved successfully", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+                        }
+                    }
+                    ClearMaster();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
         }
 
