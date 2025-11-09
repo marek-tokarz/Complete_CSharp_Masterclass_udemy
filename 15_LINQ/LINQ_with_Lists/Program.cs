@@ -12,6 +12,7 @@ namespace LINQ_with_Lists
         {
             UniversityManager um = new UniversityManager();
 
+            /*
             um.MaleStudents();
 
             um.FemaleStudents();
@@ -19,7 +20,19 @@ namespace LINQ_with_Lists
             um.SortStudentsByAge();
 
             um.AllStudentsFromBeijingTech();
+            */
 
+            int[] someInts = { 30, 12, 4, 3, 12 };
+
+            IEnumerable<int> sortedInts = from i in someInts orderby i select i;
+            IEnumerable<int> reversedInts = sortedInts.Reverse();
+
+            foreach (int i in reversedInts)
+            {
+                Console.WriteLine(i);
+            }
+
+            /*
             string input = Console.ReadLine();
             try
             {
@@ -31,7 +44,7 @@ namespace LINQ_with_Lists
             {
                 Console.WriteLine("Wrong value");
             }
-            
+            */
 
             Console.ReadKey();
         }
